@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- BOOTSTRAP 4.6.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Időjárás API</title>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="weather-card one">
+                <div class="top">
+                    <div class="wrapper">
+                        <h3 id="location" class="location">Nyíregyháza</h3>
+                        <p class="temp">
+                            <span id="temperature" class="temp-value">20</span>
+                            <span class="deg">0</span>
+                            <a href=""><span class="temp-type">C</span></a>
+                        </p>
+                        <p class="text-white">Páratartalom: 
+                            <span id="humidity" class="ml-2">45</span>%
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="search-section">
+            <input id="search" type="text" class="form-control rounded-0 py-4 mb-2 text-center">
+<!--a keresésre kattintáskor meghívjuk a függvényünket--><button onclick="searchWeather()" id="search-button" class="btn btn-dark rounded-0 w-100 py-2">Keresés</button>
+        </div>
+    </div>
+</div>
+<!--Axios függvénykészlet importálása-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="search.js"></script>
+</body>
+</html>
